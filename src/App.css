@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.colorWhite {
+  color: #fff;
+}
+
+.colorSingle {
+  color: #3333e1;
+}
+
+.linkBlack {
+  color: #000;
+  text-decoration: none;
+}
+
+.linkWhite {
+  color: #fff;
+  text-decoration: none;
+}
+
+.iconsMenu {
+  width: 3rem;
+}
+.gifSingle {
+  width: 80%;
+  height: 90%;
+}
