@@ -58,3 +58,8 @@ export const OptionMenu = styled.li`
     opacity: 0.7;
   }
 `;
+
+export const ImgIcon = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+`;

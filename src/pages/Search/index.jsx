@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import services from "../../services/index";
 import { useParams } from "react-router-dom";
-
 import { Loading } from "../../components/Loading";
 import { Card } from "../../components/Card";
 import { Container, AreaScreenGifs, AreaContent } from "./styled";
@@ -21,28 +20,34 @@ export const SearchResult = () => {
         services
           .search({ param: name, limit: 45 })
           .then((data) => {
+            if (data.data.data.length) {
+              setGifs(data.data.data);
+              setLoading(false);
+              return;
+            }
+
             setGifs([]);
-            setGifs(data.data.data);
             setLoading(false);
           })
           .catch((e) => {
             console.log(e);
           });
-        console.log("buscando");
+
         setTime();
       }, [2000]);
       setTime(timeForRequest);
     }
   }, [name]);
+
   return (
     <Container>
       <AreaScreenGifs>
         <span className="colorWhite">Resultados para: </span>
         <span className="colorSingle">&nbsp;{name}</span>
         <AreaContent>
-          {!loading || Object.keys(gifs).length ? (
+          {!loading && gifs.length ? (
             gifs.map((item, index) => <Card key={index} item={item} />)
-          ) : !Object.keys(gifs).length && !loading ? (
+          ) : !gifs.length && !loading ? (
             <h1 className="colorWhite">Ops.. Nada encontrado</h1>
           ) : (
             <Loading />

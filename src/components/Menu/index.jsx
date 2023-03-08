@@ -5,6 +5,7 @@ import {
   MenuOptions,
   MenuOptionGroup,
   OptionMenu,
+  ImgIcon,
 } from "./styled";
 import logoImage from "../../../public/logo.png";
 import iconsCat from "../../../public/cat.png";
@@ -14,6 +15,7 @@ import iconTech from "../../../public/ai.png";
 import iconSave from "../../../public/save.png";
 import { Link } from "react-router-dom";
 import { Search } from "../Search";
+
 export const Menu = () => {
   return (
     <ContainerMenu>
@@ -29,31 +31,31 @@ export const Menu = () => {
           <MenuOptionGroup>
             <Link className="linkWhite" to={"/category/car"}>
               <OptionMenu>
-                <img className="iconsMenu" src={iconCar} alt="" srcset="" />
+                <ImgIcon src={iconCar} alt="" srcset="" />
                 Carros
               </OptionMenu>
             </Link>
             <Link className="linkWhite" to={"/category/cat"}>
               <OptionMenu>
-                <img className="iconsMenu" src={iconsCat} alt="" srcset="" />
+                <ImgIcon src={iconsCat} alt="" srcset="" />
                 Gatos
               </OptionMenu>
             </Link>
             <Link className="linkWhite" to={"/category/dog"}>
               <OptionMenu>
-                <img className="iconsMenu" src={iconDog} alt="" srcset="" />
+                <ImgIcon src={iconDog} alt="" srcset="" />
                 Cachorros
               </OptionMenu>
             </Link>
             <Link className="linkWhite" to={"/category/technology"}>
               <OptionMenu>
-                <img className="iconsMenu" src={iconTech} alt="" srcset="" />
+                <ImgIcon src={iconTech} alt="" srcset="" />
                 Tecnologia
               </OptionMenu>
             </Link>
             <Link className="linkWhite" to={"/favorites"}>
               <OptionMenu>
-                <img className="iconsMenu" src={iconSave} alt="" srcset="" />
+                <ImgIcon src={iconSave} alt="" srcset="" />
                 Salvos
               </OptionMenu>
             </Link>

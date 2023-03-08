@@ -16,7 +16,6 @@ export const Favorites = () => {
         .then((data) => {
           setGifs([]);
           setGifs(data.data.data);
-          console.log(data.data.data);
         })
         .catch((e) => {
           console.log(e);

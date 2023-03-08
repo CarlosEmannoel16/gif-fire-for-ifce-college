@@ -1,6 +1,7 @@
 import axios from "axios";
 const apiKey = "?api_key=HQSPuqC1cZHGiVciAy3zYJFqOsWSzstf";
 const path = "https://api.giphy.com/v1/gifs";
+
 const services = {
   search: async ({ param, offset = 0, limit = 60 }) => {
     return axios.get(

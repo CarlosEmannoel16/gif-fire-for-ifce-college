@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-
 import { useNavigate } from "react-router-dom";
+
 export const Search = () => {
   const [search, setSearch] = useState("");
 
@@ -23,7 +23,7 @@ export const Search = () => {
         textTransform: "uppercase",
       }}
       onChange={(e) => {
-        e.target.value.length < 18 && setSearch(e.target.value);
+        e.target.value.length <= 20 && setSearch(e.target.value);
       }}
       placeholder="Procure os melhores gifs"
       value={search}
